@@ -9,11 +9,12 @@ import androidx.appcompat.widget.Toolbar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 
-class FlagOneLoginActivity : AppCompatActivity() {
+class FlagOneLoginActivity : SecureBaseActivity() {
     var click = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flag_one_login)
+        window.decorView.rootView.setFilterTouchesWhenObscured(true)
         SecureSharedPrefs.setContext(this)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)

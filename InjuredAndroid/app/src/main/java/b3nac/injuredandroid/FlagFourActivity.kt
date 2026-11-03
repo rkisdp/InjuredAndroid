@@ -13,6 +13,7 @@ class FlagFourActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flag_four)
+        window.decorView.rootView.setFilterTouchesWhenObscured(true)
         SecureSharedPrefs.setContext(this)
 
         val fab = findViewById<FloatingActionButton>(R.id.fab)

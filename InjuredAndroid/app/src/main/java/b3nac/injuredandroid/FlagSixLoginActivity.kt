@@ -14,6 +14,7 @@ class FlagSixLoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flag_six_login)
+        window.decorView.rootView.setFilterTouchesWhenObscured(true)
         SecureSharedPrefs.setContext(this)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)

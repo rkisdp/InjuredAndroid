@@ -18,7 +18,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class FlagEightLoginActivity : AppCompatActivity() {
+class FlagEightLoginActivity : SecureBaseActivity() {
     var click = 0
     var database = FirebaseDatabase.getInstance().reference
     var childRef = database.child("/aws")
@@ -26,6 +26,7 @@ class FlagEightLoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flag_eight_login)
+        window.decorView.rootView.setFilterTouchesWhenObscured(true)
         SecureSharedPrefs.setContext(this)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)

@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import io.flutter.embedding.android.FlutterActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : SecureBaseActivity() {
 
     var click = 0
 

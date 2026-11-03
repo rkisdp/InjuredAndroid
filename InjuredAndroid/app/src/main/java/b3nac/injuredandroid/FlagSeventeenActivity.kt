@@ -26,6 +26,7 @@ class FlagSeventeenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flag_seventeen)
+        window.decorView.rootView.setFilterTouchesWhenObscured(true)
 
         SecureSharedPrefs.setContext(this)
         anon()
