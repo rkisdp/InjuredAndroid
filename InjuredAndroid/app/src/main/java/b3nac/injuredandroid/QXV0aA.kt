@@ -14,6 +14,7 @@ class QXV0aA : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_qxv0a)
+        window.decorView.rootView.setFilterTouchesWhenObscured(true)
     }
 
     fun signInAnonymously(view: View) {

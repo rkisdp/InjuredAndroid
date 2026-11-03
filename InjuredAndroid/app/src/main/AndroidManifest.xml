@@ -8,11 +8,14 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="false">
         <activity
             android:name=".FlagEighteenActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_flag_eighteen"
+            android:taskAffinity=""
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <provider
@@ -32,6 +35,8 @@
         <activity
             android:name=".CSPBypassActivity"
             android:label="@string/title_activity_c_s_p_bypass"
+            android:taskAffinity=""
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -62,6 +67,8 @@
         <activity
             android:name=".RCEActivity"
             android:label="@string/title_activity_rce"
+            android:taskAffinity=""
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter android:label="filter_view_flag11">
                 <action android:name="android.intent.action.VIEW" />
@@ -77,19 +84,25 @@
         <activity android:name=".SettingsActivity" />
         <activity
             android:name=".ExportedProtectedIntent"
-            android:exported="true"
+            android:exported="false"
+            android:taskAffinity=""
+            android:launchMode="singleTask"
             android:label="@string/title_activity_exported_protected_intent"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".QXV0aA"
-            android:exported="true" />
+            android:exported="false"
+            android:taskAffinity=""
+            android:launchMode="singleTask" />
         <activity
             android:name=".FlagTwelveProtectedActivity"
             android:label="@string/title_activity_flag_twelve_protected"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DeepLinkActivity"
-            android:label="@string/title_activity_deep_link">
+            android:label="@string/title_activity_deep_link"
+            android:taskAffinity=""
+            android:launchMode="singleTask">
             <intent-filter android:label="filter_view_flag11">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -135,7 +148,10 @@
             android:name=".FlagSixLoginActivity"
             android:label="@string/title_activity_flag_six_login"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:taskAffinity=""
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -147,7 +163,9 @@
         <activity android:name=".FlagOneSuccess" />
         <activity
             android:name=".b25lActivity"
-            android:exported="true" />
+            android:exported="false"
+            android:taskAffinity=""
+            android:launchMode="singleTask" />
         <activity
             android:name=".FlagTwoActivity"
             android:label="@string/title_activity_flag_two"
@@ -163,7 +181,7 @@
 
         <receiver
             android:name=".FlagFiveReceiver"
-            android:exported="true" />
+            android:exported="false" />
 
         <activity
             android:name=".FlagFiveActivity"
@@ -171,8 +189,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TestBroadcastReceiver"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/title_activity_test_broadcast_reciever"
+            android:taskAffinity=""
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ContactActivity" />
     </application>

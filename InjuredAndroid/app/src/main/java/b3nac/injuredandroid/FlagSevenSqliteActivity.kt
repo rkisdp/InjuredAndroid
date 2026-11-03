@@ -38,6 +38,7 @@ class FlagSevenSqliteActivity : AppCompatActivity() {
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flag_seven_sqlite)
+        window.decorView.rootView.setFilterTouchesWhenObscured(true)
         setSupportActionBar(findViewById(R.id.toolbar))
         SecureSharedPrefs.setContext(this)
         preloadValues()

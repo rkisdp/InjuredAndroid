@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:filterTouchesWhenObscured="true"
     tools:context=".FlagSixLoginActivity"
     tools:showIn="@layout/activity_flag_six_login">
 
@@ -28,7 +29,7 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/enter_flag"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|textNoSuggestions"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button17"
         app:layout_constraintHorizontal_bias="0.357"

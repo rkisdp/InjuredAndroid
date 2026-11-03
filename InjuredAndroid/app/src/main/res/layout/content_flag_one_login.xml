@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:filterTouchesWhenObscured="true"
     tools:context=".FlagOneLoginActivity"
     tools:showIn="@layout/activity_flag_one_login">
 
@@ -33,7 +34,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/input_flag"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|textNoSuggestions"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
